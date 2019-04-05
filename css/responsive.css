@@ -1,0 +1,65 @@
+/*Media Query :
+
+Large Device to Small Devices;*/
+
+@media all and (max-width : 1200px) {
+
+}
+
+@media all and (max-width : 1024px) {
+}
+
+@media all and (max-width : 992px) {
+}
+
+@media all and (max-width : 768px) {
+
+button.navbar-toggler {
+    position: relative;
+    left: 93%;
+    top: -33px;
+    outline: 1px solid #ffffff;
+}
+
+a.nav-link.p-4.n_link {
+    font-size: 14px;
+    border-bottom: 1px solid #eaeae1;
+    padding: 10px!important;
+    color: black;
+    font-weight: normal!important;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.float-right {
+    width: 100%;
+    margin-top: -45px;
+    left: -9px;
+    position: relative;
+}
+
+.col.expand {
+    margin-top: 91px;
+    flex: 100%;
+    background: #ffffff;
+    position: absolute;
+    margin-left: -24px;
+}
+
+/*a.nav-link.text-black.font-weight-bold.p-4.n_link {
+    font-size: 15px;
+    padding: 6px!important;
+}*/
+
+}
+
+@media all and (max-width : 640px) {
+}
+
+@media all and (max-width : 480px) {
+}
+
+
+@media all and (max-width : 360px) {
+}
+
+@media all and (max-width : 320px) {
+}

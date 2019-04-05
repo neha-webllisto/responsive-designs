@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    width: 65px;
+    height: 65px;
+}
+
+.n_link{
+	font-size: 18px;
+}
+
