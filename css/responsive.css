@@ -52,9 +52,39 @@ nav.navbar.navbar-expand-lg.navbar-light.float-right {
 }
 
 @media all and (max-width : 640px) {
+
+button.navbar-toggler {
+    position: relative;
+    left: 89%;
+    top: -33px;
+    outline: 1px solid #ffffff;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.float-right {
+    width: 100%;
+    margin-top: -45px;
+    left: -31px;
+    position: relative;
+}
+
 }
 
 @media all and (max-width : 480px) {
+
+button.navbar-toggler {
+    position: relative;
+    left: 88%;
+    top: -33px;
+    outline: 1px solid #ffffff;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.float-right {
+    width: 100%;
+    margin-top: -45px;
+    left: 6px;
+    position: relative;
+}
+
 }
 
 
