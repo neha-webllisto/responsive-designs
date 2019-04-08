@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Slick Slider</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--Google Fonts-->    
+      <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+      <!--Bootstrap File-->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!--jQuery UI-->
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <!--Fontawesome File-->
+      <link rel="stylesheet" type="text/css" href="css/all.min.css">
+      <!-- slick css --> 
+      <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>
+      <!--Custom Stylesheet-->
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <!--Responsive Stylesheet-->
+      <link rel="stylesheet" type="text/css" href="css/responsive.css">
+   </head>
+   <body>
+
+      <section class="full">
+         <div class="slider bg-primary">
+            <img src="images/s1.jpg" class="img-fluid">
+            <img src="images/s2.jpg" class="img-fluid">
+            <img src="images/s3.jpg" class="img-fluid">
+            <img src="images/s4.jpg" class="img-fluid">
+            <img src="images/s5.jpg" class="img-fluid">
+         </div>
+      </section>
+      
+
+      <!--Main JQuery File-->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!--Fontawesome File-->
+      <script type="text/javascript" src="js/all.min.js"></script>
+      <!--Popper JS file-->
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <!--Bootstrap File-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Slick slider js -->
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/slick.min.js"></script>
+
+      <script type="text/javascript">
+         $(document).ready(function(){
+            $('.slider').slick({
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               autoplay: true,
+               autoplaySpeed: 2000,
+               autocontrol: true,
+               mobileFirst:true,
+            });
+         });
+      </script>
+
+   </body>
+</html>
