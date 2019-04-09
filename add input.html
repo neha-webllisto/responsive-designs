@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Add more</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--Google Fonts-->    
+      <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+      <!--Bootstrap File-->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!--jQuery UI-->
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <!--Fontawesome File-->
+      <link rel="stylesheet" type="text/css" href="css/all.min.css">
+      <!-- slick css --> 
+      <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>
+      <!--Custom Stylesheet-->
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <!--Responsive Stylesheet-->
+      <link rel="stylesheet" type="text/css" href="css/responsive.css">
+   </head>
+   <body>
+      <section class="bg-secondary text-center py-3 px-3">
+         <div class="container">
+            <fieldset id="add_more_fields">
+               <h1>Build your own form!</h1>
+            </fieldset>
+            <input type="button" value="Add a field" class="add btn btn-primary" id="add" />
+         </div>
+      </section>
+      <!--Main JQuery File-->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!--Fontawesome File-->
+      <script type="text/javascript" src="js/all.min.js"></script>
+      <!--Popper JS file-->
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <!--Bootstrap File-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Slick slider js -->
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/slick.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         $("#add").click(function() {
+         var lastField = $("#add_more_fields div:last");
+         var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
+         var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
+         fieldWrapper.data("idx", intId);
+         var fName = $("<input type=\"text\" class=\"fieldname form-control px-3\" placeholder=\"Enter name\" />");
+         var fType = $("<select class=\"fieldtype btn dropdown-toggle dropdown-toggle-split mx-3\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+         var removeButton = $("<input type=\"button\" class=\"remove mx-3 btn\" value=\"x\" />");
+         removeButton.click(function() {
+            $(this).parent().remove();
+         });
+         fieldWrapper.append(fName);
+         fieldWrapper.append(fType);
+         fieldWrapper.append(removeButton);
+         $("#add_more_fields").append(fieldWrapper);
+         });
+         $("#preview").click(function() {
+         $("#yourform").remove();
+         var fieldSet = $("<fieldset id=\"yourform\"><h1>Your Form</h1></fieldset>");
+         $("#add_more_fields div").each(function() {
+            var id = "input" + $(this).attr("id").replace("field","");
+            var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+            var input;
+            switch ($(this).find("select.fieldtype").first().val()) {
+                case "checkbox":
+                    input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textbox":
+                    input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textarea":
+                    input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                    break;    
+            }
+            fieldSet.append(label);
+            fieldSet.append(input);
+         });
+         $("body").append(fieldSet);
+         });
+         });
+      </script>
+   </body>
+</html>
